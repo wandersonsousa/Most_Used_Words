@@ -2,12 +2,12 @@
 
 ![screenshot](pathToScreenShot)
 
-Project developed for the purpose of learning Electron and Vuejs technology, made in a practical course of the Cod3r programming platform :computer: .
+:books: Project developed for the purpose of learning Electron and Vuejs technology, made in a practical course of the Cod3r programming platform.
 
   - finds the most common words in a caption
 
 
-### Tech
+### Tech :computer:
 
 Dillinger uses a number of open source projects to work properly:
 
