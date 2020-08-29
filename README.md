@@ -1,6 +1,6 @@
 # MostUsedWords
 
-![screenshot](pathToScreenShot)
+![screenshot](screenshot.png)
 
 :books: Project developed for the purpose of learning Electron and Vuejs technology, made in a practical course of the Cod3r programming platform.
 
