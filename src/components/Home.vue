@@ -2,7 +2,7 @@
   <v-main fluid>
       <v-form>
           <v-file-input 
-            label="selecione as legendas"
+            label="Busque as legendas"
             prepend-icon="mdi-message-text"
             append-icon="mdi-send"
             outlined
@@ -20,24 +20,30 @@
 </template>
 
 <script>
-import Pill from './Pill';
+const {ipcRenderer} = window.require('electron')
+import Pill from './Pill'
+
 
 export default {
     components: {Pill},
     data : function() {
         return {
             files: [],
-            groupedWords : [
-                { name: 'you', amount: 900 },
-                { name:'he', amount:853},
-                { name:'i', amount:1234},
-                
-            ]
+            groupedWords : []
         }
     },
     methods: {
         processSubtitles() {
-            console.log( this.files ) 
+            const captionsFiles = Array.from( this.files )
+            console.log(captionsFiles)
+            ipcRenderer.send('process-subtitles', {
+                message:'All caption paths',
+                data: captionsFiles
+            })
+
+            ipcRenderer.on('process-subtitles', (evt, CaptionsInfoToPills) => {
+                this.groupedWords = CaptionsInfoToPills;
+            })
         }
     }
 
