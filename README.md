@@ -2,7 +2,7 @@
 
 ![screenshot](pathToScreenShot)
 
-Project developed for the purpose of learning Electron and Vuejs technology, made in a practical course of the Cod3r programming platform.
+Project developed for the purpose of learning Electron and Vuejs technology, made in a practical course of the Cod3r programming platform :computer: .
 
   - finds the most common words in a caption
 
@@ -59,4 +59,3 @@ MIT
 
 [node.js]: <http://nodejs.org>
 
-:computer:
