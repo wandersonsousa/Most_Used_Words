@@ -58,4 +58,7 @@ MIT
 
 
 [node.js]: <http://nodejs.org>
-
+[Vuejs] <https://vuejs.org/>
+[electron] <https://www.electronjs.org/>
+[Twitter Bootstrap] <https://getbootstrap.com/>
+[eslint] <https://eslint.org/>
