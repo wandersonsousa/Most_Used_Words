@@ -4,16 +4,12 @@ module.exports = paths => {
     return new Promise(
         (resolve, reject) => {
             try {
-                const rows = paths
+                const string = paths
                     .map(path => 
                         fs.readFileSync(path).toString('utf-8')
                     )
-                    .reduce( (fullText, fileText) => 
-                        `${fullText}\n${fileText}`
-                    )
-                    .split('\n')
                 
-                resolve(rows)
+                resolve(string.join('\s'))
                 
             } catch (error) {
                 reject(error)
