@@ -34,14 +34,18 @@ export default {
     },
     methods: {
         processSubtitles() {
-            const captionsFiles = Array.from( this.files )
-            console.log(captionsFiles)
-            ipcRenderer.send('process-subtitles', {
-                message:'All caption paths',
-                data: captionsFiles
-            })
+            const captionsFiles = this.files.map(
+                file => ({ 
+                    name:file.name,
+                     path:file.path, 
+                     size: file.size, 
+                     lastModified: file.lastModified 
+                })
+            )
 
-            ipcRenderer.on('process-subtitles', (evt, CaptionsInfoToPills) => {
+            ipcRenderer.send('process-subtitles', captionsFiles)
+
+            ipcRenderer.on('process-subtitles', async (evt, CaptionsInfoToPills) => {
                 this.groupedWords = CaptionsInfoToPills;
             })
         }

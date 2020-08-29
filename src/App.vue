@@ -19,11 +19,9 @@
 import Home from './components/Home'
 export default {
   name: 'App',
-
   components: {
     Home
   },
-
   data: () => ({
   }),
 };
