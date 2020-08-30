@@ -8,9 +8,6 @@
 
 
 ### Tech :computer:
-
-Dillinger uses a number of open source projects to work properly:
-
 * [Vuejs] - HTML enhanced for web apps and electron application!
 * [electron] - engine for desktop application.
 * [Twitter Bootstrap] - great UI boilerplate for modern web apps
